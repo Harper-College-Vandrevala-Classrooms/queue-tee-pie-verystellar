@@ -10,6 +10,10 @@ void enqueue(Cutie c) {
   }
   queue.add(c);
 }
+
+void clear(){
+  queue.clear();
+}
 Cutie dequeue() {
   Cutie c = queue.get(0);
   queue.remove(0);
@@ -62,5 +66,7 @@ int size() {
     //full list
     queue.enqueue(kitty);
     //should be full
+    queue.clear();
+    System.out.println("Size: " + queue.size()); //should be empty
   }
 }
